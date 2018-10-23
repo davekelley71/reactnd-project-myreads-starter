@@ -15,7 +15,6 @@ class MainPage extends React.Component {
 	componentDidMount() {
 		BooksAPI.getAll()
 		.then(result => {
-			console.log(result);
 			this.setState({ books: result} );
 		});
 	}
@@ -24,11 +23,12 @@ class MainPage extends React.Component {
 		BooksAPI.update(book, shelf).then(result => {
 			book.shelf = shelf;
 			this.setState(state => ({
-				books: state.books.filter(b => b.id !== book.id).concat([book])
+				books: state.books.filter(bk => bk.id !== book.id).concat([book])
 	 		
 		}));
 	});
   }
+  
 	render() {
 		return (
 			<div className="list-books">
@@ -40,8 +40,6 @@ class MainPage extends React.Component {
               	<Shelf reassignBookShelf={this.reassignBookShelf} name= "Currently Reading" books={this.state.books.filter(b => b.shelf === "currentlyReading")} />
               	<Shelf reassignBookShelf={this.reassignBookShelf} name= "Want to Read" books={this.state.books.filter(b => b.shelf === "wantToRead")} />
               	<Shelf reassignBookShelf={this.reassignBookShelf} name= "Read" books={this.state.books.filter(b => b.shelf === "read")} />
-
-                
               </div>
             </div>
             <div className="open-search">
