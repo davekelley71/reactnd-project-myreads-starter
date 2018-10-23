@@ -3,6 +3,7 @@ MyReads
 
 To launch this project you will need to:
     - clone the project from github
+        use git clone https://github.com/davekelley71/reactnd-project-myreads-starter.git
     - cd into the project folder
     - type "npm install" into the terminal
     - type "yarn start" or "npm start" into the terminal
