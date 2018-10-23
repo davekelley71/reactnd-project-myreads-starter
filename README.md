@@ -1,3 +1,16 @@
+MyReads
+
+
+To launch this project you will need to:
+    - clone the project from github
+    - cd into the project folder
+    - type "npm install" into the terminal
+    - type "yarn start" or "npm start" into the terminal
+
+This will cause a new tab to open with the MyReads App. Have fun exploring!
+
+----------------------------------------------------------------------------
+
 # MyReads Project
 
 This is the starter template for the final assessment project for Udacity's React Fundamentals course. The goal of this template is to save you time by providing a static example of the CSS and HTML markup that may be used, but without any of the React code that is needed to complete the project. If you choose to start with this template, your job will be to add interactivity to the app by refactoring the static code in this template.

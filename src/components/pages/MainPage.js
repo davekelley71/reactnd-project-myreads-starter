@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as BooksAPI from '../../BooksAPI';
 import Shelf from '../Shelf';
-import Book from '../Book';
 
 class MainPage extends React.Component {
 	constructor(props) {
@@ -28,7 +27,7 @@ class MainPage extends React.Component {
 		}));
 	});
   }
-  
+
 	render() {
 		return (
 			<div className="list-books">
