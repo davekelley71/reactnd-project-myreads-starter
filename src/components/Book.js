@@ -6,7 +6,7 @@ class Book extends React.Component {
 			        <li>
                         <div className="book">
                           <div className="book-top">
-                            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${this.props.book.imageLinks && this.props.book.imageLinks.thumbnail || "" } ")` }}></div>
+                            <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail : "" } ")` }}></div>
                             <div className="book-shelf-changer">
                               <select value = {this.props.book.shelf || "none"} onChange={(event) => {this.props.reassignBookShelf(this.props.book, event.target.value)}} >
                                 <option value="move" disabled>Move to...</option>
@@ -24,7 +24,7 @@ class Book extends React.Component {
                           </div>
                           <div className="book-authors">
                           	{
-                          		this.props.book.authors  && this.props.book.authors[0] || "No author ..."
+                          		this.props.book.authors  ? this.props.book.authors[0] : "No author ..."
                           	}
                           </div>
                         </div> 
